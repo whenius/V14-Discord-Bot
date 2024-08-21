@@ -45,7 +45,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('NewTab'));
+app.get('/', (req, res) => res.send('Bot'));
 
 app.listen(port, () =>
     console.log(`Çalışma adresi: https://new-tab.cf:${port} | DB'e bağlanıldı... by whenius`)
@@ -58,7 +58,7 @@ const csdc = require("discord.js")
     if(message.author.id === client.user.id) return;
     if(!message.guild) { 
   client.channels.cache.get(csl).send({embeds: [new csdc.EmbedBuilder()
-    .setAuthor({name: 'NewTab yeni bir mesaj algıladı'})
+    .setAuthor({name: 'Bot yeni bir mesaj algıladı'})
     .setFooter({text: 'Saat'})
     .setDescription(`Gönderen:   ${message.author.tag}`)
     .setTimestamp()
@@ -116,7 +116,7 @@ const csdc = require("discord.js")
     .setColor("White")
     .setDescription(`[${message.author.tag}](https://discord.com/users/${message.author.id}) tarafından etiketlendin ama mesaj silindi.\n\nMesaj İçeriği: ${message.content}\n\nMesajı Silen: <@${message.author.id}> **|** [${message.author.tag}](https://discord.com/users/${message.author.id})\n\nSilinen Kanal: <#${message.channel.id}>\n\nMesaj Yazılış Tarihi: <t:${Math.floor(Date.now() /1000)}:R>`)
 .setAuthor({
-      name: 'NewTab Etiket Bilgi',
+      name: 'Etiket Bilgi',
       iconURL: client.user.avatarURL(),
     })
              
