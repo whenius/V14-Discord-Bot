@@ -48,7 +48,7 @@ const port = 3000;
 app.get('/', (req, res) => res.send('Bot'));
 
 app.listen(port, () =>
-    console.log(`Çalışma adresi: https://new-tab.cf:${port} | DB'e bağlanıldı... by whenius`)
+    console.log(`Çalışma adresi: https://siteniz:${port} | DB'e bağlanıldı... by whenius`)
 );
 
 client.on("messageCreate", async message => {
